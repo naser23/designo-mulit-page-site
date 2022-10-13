@@ -23,6 +23,7 @@ function Navbar() {
           onClick={onClick}
         />
       </div>
+      {isOpen && <MobileNav />}
 
       <nav className="navLinks">
         <ul className="links font-20">

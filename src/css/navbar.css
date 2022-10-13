@@ -27,6 +27,8 @@
 /* MobileNav styling */
 .mobileNav {
   width: 100%;
+  position: absolute;
+  top: 5rem;
   background-color: black;
 }
 
@@ -36,6 +38,10 @@
   list-style-type: none;
   font-size: 1.25rem;
   color: white;
+}
+
+.mobileNavLink {
+  padding-left: 1rem;
 }
 
 @media (min-width: 567.98px) {
