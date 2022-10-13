@@ -26,7 +26,7 @@ function Navbar() {
       {isOpen && <MobileNav />}
 
       <nav className="navLinks">
-        <ul className="links font-20">
+        <ul className="links font-300">
           <li className="link">OUR COMPANY</li>
           <li className="link">LOCATIONS</li>
           <li className="link">CONTACT</li>
