@@ -25,11 +25,23 @@
 }
 
 /* MobileNav styling */
+
+@keyframes navOpen {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
 .mobileNav {
   width: 100%;
   position: absolute;
   top: 5rem;
   background-color: black;
+  animation-name: navOpen;
+  animation-duration: 1s;
 }
 
 .mobileNavLinks {
@@ -83,10 +95,6 @@
   .navbar {
     padding: 2rem 2rem;
   }
-
-  /* .logo {
-    width: 40%;
-  } */
 }
 @media (min-width: 991.98px) {
   .navbar {
