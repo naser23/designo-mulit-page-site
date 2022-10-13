@@ -1,15 +1,28 @@
 import React from "react";
+import { useState } from "react";
 import LogoDark from "../assets/shared/desktop/logo-dark.png";
 import HamburgerIcon from "../assets/shared/mobile/icon-hamburger.svg";
 import CloseIcon from "../assets/shared/mobile/icon-close.svg";
+import MobileNav from "./MobileNav";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function onClick() {
+    setIsOpen(!isOpen);
+  }
+
   return (
-    <header className="navbar font-40">
-      {/* <div className="logoArea">
-      </div> */}
-      <img className="logo" src={LogoDark} alt="Light logo" />
-      <img className="hamburgerIcon" src={HamburgerIcon} alt="Hamburger Icon" />
+    <header className="navbar">
+      <div className="logoArea">
+        <img className="logo" src={LogoDark} alt="Light logo" />
+        <img
+          className="hamburgerIcon"
+          src={isOpen ? CloseIcon : HamburgerIcon}
+          alt="Hamburger Icon"
+          onClick={onClick}
+        />
+      </div>
 
       <nav className="navLinks">
         <ul className="links font-20">
